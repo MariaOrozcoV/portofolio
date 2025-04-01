@@ -1,44 +1,48 @@
-import { useState } from 'react'
 import './App.css'
-
+import Logo from './components/svg/logo'
+import Facebook from './components/svg/facebook'
+import Instagram from './components/svg/instagram'
+import Github from './components/svg/github'
+import Women from './components/svg/women'
 function App() {
   
-  const [contador, setContador] = useState(0);
-  const [esRojo, setEsRojo] = useState(false);
-
-  function cambiarColor() {
-    if(esRojo == true) {
-      setEsRojo(false);
-    } else {
-      setEsRojo(true);
-    }
-  }
-
-  function sumar() {
-    setContador(estadoAnterior => estadoAnterior + 1);
-  }
-
-  function disminuir(){
-    setContador(estadoAnterior => estadoAnterior - 1);
-
-  }
-
-  function MariaRojo() {
-    if (esRojo) {
-      return <h1 style={{'color': 'red'}}>Maria</h1>
-    } else {
-      return <h1 className='maria' style={{'font-size': '20px'}}>Maria</h1>;
-    }
-  }
-
   return (
-    <div>
-      <MariaRojo />
-      <p>{contador}</p>
-      <p>{esRojo}</p>
-      <button onClick={sumar}>+</button>
-      <button onClick={disminuir}>-</button>
-      <button onClick={cambiarColor}>Cambiar</button>
+    <div className="container">
+      <header className="header">
+        <Logo />
+        <nav className="nav">
+          <a href="/">Home</a>
+          <a href="/about">About</a>
+        </nav>
+        <nav className='redessociales'> 
+          <a href="https://instagram.com"><Instagram /></a> 
+          <a href="https://github.com"><Github /></a>
+          <a href="https://facebook.com"><Facebook /></a>
+        </nav>
+      </header>
+      <main className="main">
+        <h1>Portafolio</h1>
+        <section className="hero">
+          <Women className="women"/>
+          <p>
+            Soy Maria estudiante de ultimo semestre de la carrera ingenieria de sistemas...
+          </p>
+        </section>
+        <h2>Proyectos</h2>
+        <section className="projects">
+          <article>
+            <h3>Portofolios</h3>
+            <p>Página web de portafolio personal</p>
+          </article>
+          <article>
+            <h3>Tienda online </h3>
+            <p>Súper tienda online la mejor tiendade Popayan</p>
+          </article>
+        </section>
+      </main>
+      <footer className='footer'>
+        <p>© 2023 María</p>
+      </footer>
     </div>
   )
 }

@@ -3,7 +3,6 @@ import Logo from './components/svg/logo'
 import Facebook from './components/svg/facebook'
 import Instagram from './components/svg/instagram'
 import Github from './components/svg/github'
-import Women from './components/svg/women'
 function App() {
   
   return (
@@ -21,9 +20,11 @@ function App() {
         </nav>
       </header>
       <main className="main">
-        <h1>Portafolio</h1>
+        <h2>Portafolio</h2>
         <section className="hero">
-          <Women className="women"/>
+        <img src="/images/perfil.jpg" alt="Foto" />
+
+        
           <p>
             Soy Maria estudiante de ultimo semestre de la carrera ingenieria de sistemas...
           </p>
@@ -31,7 +32,7 @@ function App() {
         <h2>Proyectos</h2>
         <section className="projects">
           <article>
-            <h3>Portofolios</h3>
+            <h3>Portafolios</h3>
             <p>Página web de portafolio personal</p>
           </article>
           <article>

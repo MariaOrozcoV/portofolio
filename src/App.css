@@ -10,6 +10,7 @@
   flex-direction: column;
   align-items: center;
   width: 100%;
+  background-color:rgb(127, 134, 122) ;
 }
 
 .header {
@@ -19,6 +20,8 @@
   align-items: center;
   justify-content:space-between;
 }
+
+
 
 .redessociales {
   display: flex;
@@ -36,6 +39,7 @@
   align-items: center;
   justify-content: center;
   padding: 2rem;
+  gap: 32px;
 }
 
 .women {
@@ -46,8 +50,8 @@
 .projects {
   display: flex;
   flex-direction: row;
-  gap: 8px;
-  
+  gap: 8px; 
+  justify-content: center;
 }
 
 article {
@@ -58,4 +62,18 @@ article {
   padding: 1rem;
   border-radius: 8px;
   background-color: #f0f0f0;
+  transition: width 0.5s ease, background-color 0.5s ease;
+}
+
+article:hover{
+  width: 200px; /* Cambia el ancho */
+  background-color: #00bcd4; /* Cambia el color del fondo */
+}
+
+img {
+  width: 150px; /* Ajusta el tamaño de la imagen */
+  height: 150px;
+  border: 5px solid #99968e; /* Borde alrededor de la imagen */
+  border-radius: 50%; /* Hace el borde circular */
+  object-fit: cover; 
 }
